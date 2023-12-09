@@ -1,7 +1,7 @@
 package trial.code.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import trial.code.dto.UserDto;
 import trial.code.model.User;
@@ -17,7 +17,7 @@ public class UserServiceImpl {
         User user = new User();
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
-        user.setPassword(new BCryptPasswordEncoder().encode(userDto.getPassword()));
+        user.setPassword(userDto.getPassword());
         return userRepository.save(user);
     }
 
