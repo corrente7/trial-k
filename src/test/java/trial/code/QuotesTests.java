@@ -196,6 +196,5 @@ public class QuotesTests {
 
         assertThat(response.getStatus()).isEqualTo(200);
         assertThat(quoteRepository.findById(id).isEmpty());
-        System.out.println(testQuote);
     }
 }

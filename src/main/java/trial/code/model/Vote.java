@@ -15,6 +15,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.OnDelete;
 
 import java.util.Date;
 
@@ -32,7 +34,8 @@ public class Vote {
 
     private VoteType voteType;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "quoteId", referencedColumnName = "quoteId")
     private Quote quote;
 
