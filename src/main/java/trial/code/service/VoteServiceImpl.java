@@ -10,9 +10,7 @@ import trial.code.model.Quote;
 import trial.code.model.Vote;
 import trial.code.repository.QuoteRepository;
 import trial.code.repository.VoteRepository;
-
 import java.util.NoSuchElementException;
-
 import static trial.code.model.VoteType.UPVOTE;
 
 @Service
@@ -42,8 +40,5 @@ public class VoteServiceImpl {
 
         quoteRepository.save(quote);
         voteRepository.save(vote);
-
     }
-
-
 }

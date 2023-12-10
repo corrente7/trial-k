@@ -24,7 +24,6 @@ public class TestUtils {
 
     private Model<Vote> voteModel;
 
-
     @Autowired
     private UserRepository userRepository;
 
@@ -33,8 +32,6 @@ public class TestUtils {
 
     @Autowired
     private VoteRepository voteRepository;
-
-
 
     @PostConstruct
     private void init() {

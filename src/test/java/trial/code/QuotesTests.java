@@ -103,7 +103,6 @@ public class QuotesTests {
         assertThat(response1.getStatus()).isEqualTo(200);
         assertThat(response1.getContentAsString()).contains("777");
         assertThat(response1.getContentAsString()).doesNotContain("1000");
-
     }
 
     @Test
@@ -130,7 +129,6 @@ public class QuotesTests {
 
         quoteRepository.save(testQuote1);
 
-
         MockHttpServletResponse response = mockMvc
                 .perform(get("/api/quotes/random"))
                 .andReturn().getResponse();
@@ -144,7 +142,6 @@ public class QuotesTests {
         QuoteDto quoteDto = new QuoteDto();
         quoteDto.setContent("rrr");
 
-
         MockHttpServletResponse response = mockMvc
                 .perform(post("/api/quotes")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -152,7 +149,6 @@ public class QuotesTests {
 
                 .andReturn()
                 .getResponse();
-
 
         assertThat(response.getStatus()).isEqualTo(201);
 
@@ -183,7 +179,6 @@ public class QuotesTests {
                 .andReturn().getResponse();
 
         assertThat(response1.getContentAsString()).contains("77777");
-
     }
     @Test
     public void deleteQuoteTest() throws Exception {

@@ -13,7 +13,6 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.util.Date;
 
 @Entity
@@ -23,6 +22,7 @@ import java.util.Date;
 @Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class User {
 
     @Id

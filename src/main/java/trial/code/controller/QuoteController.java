@@ -18,7 +18,6 @@ import trial.code.service.QuoteServiceImpl;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/api/quotes")
 public class QuoteController {
@@ -54,7 +53,6 @@ public class QuoteController {
 
     @GetMapping(path = "/last3voted")
     public List<Quote> getLast3VotedQuotes() {
-
         return quoteService.getLast3VotedQuotes();
     }
 

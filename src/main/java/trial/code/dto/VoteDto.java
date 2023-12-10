@@ -9,6 +9,7 @@ import trial.code.model.VoteType;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VoteDto {
+
     private VoteType voteType;
     private Long quoteId;
 }

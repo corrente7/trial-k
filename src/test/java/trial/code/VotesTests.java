@@ -75,7 +75,6 @@ public class VotesTests {
                 .getResponse();
 
         assertThat(response.getStatus()).isEqualTo(201);
-       // assertThat(testQuote.getScore()).isEqualTo(1);
 
         Long id = testQuote.getQuoteId();
 
@@ -104,7 +103,6 @@ public class VotesTests {
                 .getResponse();
 
         assertThat(response.getStatus()).isEqualTo(201);
-        //assertThat(testQuote.getScore()).isEqualTo(119);
 
         Long id = testQuote.getQuoteId();
 

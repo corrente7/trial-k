@@ -14,7 +14,6 @@ import trial.code.model.Quote;
 import trial.code.model.Vote;
 import trial.code.repository.QuoteRepository;
 import trial.code.repository.VoteRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -30,7 +29,6 @@ public class QuoteServiceImpl {
 
     @Autowired
     private VoteRepository voteRepository;
-
 
     public Quote createQuote(QuoteDto quoteDto) {
         Quote quote = new Quote();
@@ -56,7 +54,6 @@ public class QuoteServiceImpl {
     }
 
     public List<Quote> getTop10Quotes() {
-
         return quoteRepository.findTop10ByOrderByScoreDesc();
     }
 
@@ -65,13 +62,11 @@ public class QuoteServiceImpl {
     }
 
     public List<Quote> getLast3VotedQuotes() {
-
         List<Vote> votes = voteRepository.findFirst3ByOrderByCreatedAtDesc();
         List<Quote> last3Quotes = new ArrayList<>();
         for (Vote vote : votes) {
             last3Quotes.add(vote.getQuote());
         }
-
         return last3Quotes;
     }
 
@@ -80,7 +75,6 @@ public class QuoteServiceImpl {
             throw new NoSuchElementException("Quote not found");
         }
         Quote quote = quoteRepository.findById(id).orElseThrow();
-
         quote.setContent(quoteDto.getContent());
         return quoteRepository.save(quote);
     }

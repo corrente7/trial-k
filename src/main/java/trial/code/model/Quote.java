@@ -25,7 +25,6 @@ import java.util.Date;
 @Table(name = "quotes")
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Quote {
 
     @Id

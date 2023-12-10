@@ -18,9 +18,7 @@ public class VoteController {
 
     @PostMapping(path = "")
     @ResponseStatus(HttpStatus.CREATED)
-
     public void createVote(@RequestBody VoteDto voteDto) {
-
         voteService.vote(voteDto);
     }
 }

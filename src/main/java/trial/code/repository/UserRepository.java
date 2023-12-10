@@ -3,7 +3,6 @@ package trial.code.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import trial.code.model.User;
-
 import java.util.Optional;
 
 @Repository

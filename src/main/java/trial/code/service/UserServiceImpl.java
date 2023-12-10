@@ -20,5 +20,4 @@ public class UserServiceImpl {
         user.setPassword(userDto.getPassword());
         return userRepository.save(user);
     }
-
 }

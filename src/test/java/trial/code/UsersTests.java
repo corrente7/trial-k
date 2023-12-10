@@ -53,9 +53,7 @@ public class UsersTests {
                 .andReturn()
                 .getResponse();
 
-
         assertThat(response.getStatus()).isEqualTo(201);
         assertThat(userRepository.findByName("Mark").get().toString()).contains("mark@google.com");
-
     }
 }

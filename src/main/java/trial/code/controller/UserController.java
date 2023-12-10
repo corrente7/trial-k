@@ -15,7 +15,6 @@ import trial.code.service.UserServiceImpl;
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-
     @Autowired
     private UserServiceImpl userService;
 

@@ -15,5 +15,4 @@ public class QuoteDto {
 
     @NotBlank
     private String content;
-
 }
